@@ -1,0 +1,222 @@
+[0.016s] Invoking command in '/home/quentin/Bureau/roomba_virtuel/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quentin/ros2_ws/install/py_srvcli:/home/quentin/ros2_ws/install/py_pubsub:/home/quentin/ros2_ws/install/launch_testing_examples:/home/quentin/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/quentin/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/quentin/ros2_ws/install/examples_rclpy_minimal_service:/home/quentin/ros2_ws/install/examples_rclpy_minimal_publisher:/home/quentin/ros2_ws/install/examples_rclpy_minimal_client:/home/quentin/ros2_ws/install/examples_rclpy_minimal_action_server:/home/quentin/ros2_ws/install/examples_rclpy_minimal_action_client:/home/quentin/ros2_ws/install/examples_rclpy_guard_conditions:/home/quentin/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/quentin/Bureau/roomba_virtuel/build/custom_interfaces -- -j16 -l16
+[0.108s] [  1%] Built target custom_interfaces__rosidl_generator_type_description
+[0.121s] [  1%] Built target ament_cmake_python_copy_custom_interfaces
+[0.123s] [  3%] Built target custom_interfaces__rs
+[0.131s] [  5%] Built target custom_interfaces__cpp
+[0.132s] [ 25%] Built target custom_interfaces__rosidl_generator_c
+[0.159s] [ 80%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp
+[0.159s] [ 80%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c
+[0.159s] [ 80%] Built target custom_interfaces__rosidl_typesupport_c
+[0.159s] [ 80%] Built target custom_interfaces__rosidl_typesupport_cpp
+[0.159s] [ 80%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.159s] [ 80%] Built target custom_interfaces__rosidl_typesupport_introspection_c
+[0.180s] [ 80%] Built target custom_interfaces
+[0.202s] [ 81%] Built target custom_interfaces__py
+[0.228s] [ 89%] Built target custom_interfaces__rosidl_generator_py
+[0.253s] [ 92%] Built target custom_interfaces_s__rosidl_typesupport_introspection_c
+[0.254s] [ 96%] Built target custom_interfaces_s__rosidl_typesupport_c
+[0.254s] [100%] Built target custom_interfaces_s__rosidl_typesupport_fastrtps_c
+[0.324s] running egg_info
+[0.342s] writing custom_interfaces.egg-info/PKG-INFO
+[0.342s] writing dependency_links to custom_interfaces.egg-info/dependency_links.txt
+[0.342s] writing top-level names to custom_interfaces.egg-info/top_level.txt
+[0.394s] reading manifest file 'custom_interfaces.egg-info/SOURCES.txt'
+[0.394s] writing manifest file 'custom_interfaces.egg-info/SOURCES.txt'
+[0.435s] [100%] Built target ament_cmake_python_build_custom_interfaces_egg
+[0.459s] Invoked command in '/home/quentin/Bureau/roomba_virtuel/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quentin/ros2_ws/install/py_srvcli:/home/quentin/ros2_ws/install/py_pubsub:/home/quentin/ros2_ws/install/launch_testing_examples:/home/quentin/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/quentin/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/quentin/ros2_ws/install/examples_rclpy_minimal_service:/home/quentin/ros2_ws/install/examples_rclpy_minimal_publisher:/home/quentin/ros2_ws/install/examples_rclpy_minimal_client:/home/quentin/ros2_ws/install/examples_rclpy_minimal_action_server:/home/quentin/ros2_ws/install/examples_rclpy_minimal_action_client:/home/quentin/ros2_ws/install/examples_rclpy_guard_conditions:/home/quentin/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/quentin/Bureau/roomba_virtuel/build/custom_interfaces -- -j16 -l16
+[0.471s] Invoking command in '/home/quentin/Bureau/roomba_virtuel/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quentin/ros2_ws/install/py_srvcli:/home/quentin/ros2_ws/install/py_pubsub:/home/quentin/ros2_ws/install/launch_testing_examples:/home/quentin/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/quentin/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/quentin/ros2_ws/install/examples_rclpy_minimal_service:/home/quentin/ros2_ws/install/examples_rclpy_minimal_publisher:/home/quentin/ros2_ws/install/examples_rclpy_minimal_client:/home/quentin/ros2_ws/install/examples_rclpy_minimal_action_server:/home/quentin/ros2_ws/install/examples_rclpy_minimal_action_client:/home/quentin/ros2_ws/install/examples_rclpy_guard_conditions:/home/quentin/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/quentin/Bureau/roomba_virtuel/build/custom_interfaces
+[0.490s] -- Install configuration: ""
+[0.490s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces
+[0.490s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/msg/RoombaState.json
+[0.491s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/srv/SetPowerMode.json
+[0.491s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/srv/ToggleCleaning.json
+[0.491s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[0.491s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[0.492s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[0.492s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__functions.h
+[0.492s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__struct.h
+[0.492s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__functions.c
+[0.492s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__description.c
+[0.492s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__type_support.h
+[0.493s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__type_support.h
+[0.493s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__functions.c
+[0.493s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__struct.h
+[0.493s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__type_support.c
+[0.493s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__description.c
+[0.494s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__type_support.c
+[0.494s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__functions.h
+[0.494s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/set_power_mode.h
+[0.494s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/toggle_cleaning.h
+[0.494s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[0.495s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+[0.495s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__type_support.c
+[0.495s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__type_support.h
+[0.496s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__functions.h
+[0.496s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__struct.h
+[0.496s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__description.c
+[0.496s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__functions.c
+[0.496s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/roomba_state.h
+[0.497s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_c__visibility_control.h
+[0.497s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/environment/library_path.sh
+[0.497s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/environment/library_path.dsv
+[0.497s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so
+[0.498s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[0.498s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[0.498s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[0.498s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__rosidl_typesupport_fastrtps_c.h
+[0.498s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__rosidl_typesupport_fastrtps_c.h
+[0.499s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[0.499s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+[0.499s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__rosidl_typesupport_fastrtps_c.h
+[0.499s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.500s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_c.so
+[0.500s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[0.500s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[0.500s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[0.501s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__rosidl_typesupport_introspection_c.h
+[0.501s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__type_support.c
+[0.501s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__type_support.c
+[0.501s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__rosidl_typesupport_introspection_c.h
+[0.501s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[0.501s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+[0.502s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__rosidl_typesupport_introspection_c.h
+[0.502s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__type_support.c
+[0.502s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.502s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so
+[0.502s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so
+[0.503s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[0.503s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[0.503s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[0.503s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__builder.hpp
+[0.503s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__traits.hpp
+[0.504s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__struct.hpp
+[0.504s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__type_support.hpp
+[0.504s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__builder.hpp
+[0.504s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__type_support.hpp
+[0.504s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__traits.hpp
+[0.505s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__struct.hpp
+[0.505s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/toggle_cleaning.hpp
+[0.505s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/set_power_mode.hpp
+[0.505s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[0.505s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/roomba_state.hpp
+[0.506s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+[0.506s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__builder.hpp
+[0.506s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__struct.hpp
+[0.506s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__type_support.hpp
+[0.506s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__traits.hpp
+[0.507s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.507s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[0.507s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[0.507s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[0.507s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[0.508s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__rosidl_typesupport_fastrtps_cpp.hpp
+[0.508s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/dds_fastrtps
+[0.508s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[0.508s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+[0.509s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__rosidl_typesupport_fastrtps_cpp.hpp
+[0.509s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/dds_fastrtps
+[0.509s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.509s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[0.509s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces
+[0.510s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv
+[0.510s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail
+[0.510s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__type_support.cpp
+[0.510s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__rosidl_typesupport_introspection_cpp.hpp
+[0.510s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/toggle_cleaning__rosidl_typesupport_introspection_cpp.hpp
+[0.511s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/set_power_mode__type_support.cpp
+[0.511s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg
+[0.511s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail
+[0.511s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__type_support.cpp
+[0.511s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/roomba_state__rosidl_typesupport_introspection_cpp.hpp
+[0.512s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so
+[0.512s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so
+[0.512s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.sh
+[0.512s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.dsv
+[0.512s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info
+[0.513s] -- Installing: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[0.513s] -- Installing: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[0.513s] -- Installing: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[0.513s] -- Installing: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[0.513s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces
+[0.514s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv
+[0.514s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_set_power_mode.py
+[0.514s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_toggle_cleaning.py
+[0.514s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/__init__.py
+[0.514s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_set_power_mode_s.c
+[0.515s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_toggle_cleaning_s.c
+[0.515s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/__init__.py
+[0.515s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so
+[0.515s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.515s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg
+[0.515s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/__init__.py
+[0.516s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_roomba_state_s.c
+[0.516s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_roomba_state.py
+[0.516s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[0.516s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so
+[0.517s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c
+[0.517s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[0.535s] Listing '/home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces'...
+[0.535s] Listing '/home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg'...
+[0.536s] Listing '/home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv'...
+[0.541s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[0.541s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so
+[0.542s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so
+[0.542s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_py.so
+[0.542s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/ament_index/resource_index/rust_packages/custom_interfaces
+[0.543s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/rust
+[0.543s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/rust/src
+[0.543s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/rust/src/msg.rs
+[0.544s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/rust/src/srv
+[0.544s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/rust/src/srv/rmw.rs
+[0.544s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/rust/src/msg
+[0.544s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/rust/src/msg/rmw.rs
+[0.545s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/rust/src/srv.rs
+[0.545s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/rust/src/lib.rs
+[0.545s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/rust/Cargo.toml
+[0.545s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/rust/build.rs
+[0.546s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/msg/RoombaState.idl
+[0.546s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/srv/SetPowerMode.idl
+[0.546s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/srv/ToggleCleaning.idl
+[0.546s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/msg/RoombaState.msg
+[0.546s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/srv/SetPowerMode.srv
+[0.547s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/srv/ToggleCleaning.srv
+[0.547s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/ament_index/resource_index/package_run_dependencies/custom_interfaces
+[0.548s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/ament_index/resource_index/parent_prefix_path/custom_interfaces
+[0.549s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.sh
+[0.549s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.dsv
+[0.549s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/environment/path.sh
+[0.550s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/environment/path.dsv
+[0.551s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/local_setup.bash
+[0.551s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/local_setup.sh
+[0.552s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/local_setup.zsh
+[0.552s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/local_setup.dsv
+[0.553s] -- Installing: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/package.dsv
+[0.554s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/ament_index/resource_index/packages/custom_interfaces
+[0.554s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport.cmake
+[0.555s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport-noconfig.cmake
+[0.555s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[0.555s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.556s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[0.557s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.557s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport.cmake
+[0.558s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[0.558s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cppExport.cmake
+[0.559s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.560s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.561s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[0.561s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.562s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport.cmake
+[0.562s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[0.563s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport.cmake
+[0.564s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[0.564s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake-extras.cmake
+[0.564s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.565s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.565s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[0.565s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[0.566s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.566s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.566s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig.cmake
+[0.567s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig-version.cmake
+[0.567s] -- Up-to-date: /home/quentin/Bureau/roomba_virtuel/install/custom_interfaces/share/custom_interfaces/package.xml
+[0.567s] Invoked command in '/home/quentin/Bureau/roomba_virtuel/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quentin/ros2_ws/install/py_srvcli:/home/quentin/ros2_ws/install/py_pubsub:/home/quentin/ros2_ws/install/launch_testing_examples:/home/quentin/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/quentin/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/quentin/ros2_ws/install/examples_rclpy_minimal_service:/home/quentin/ros2_ws/install/examples_rclpy_minimal_publisher:/home/quentin/ros2_ws/install/examples_rclpy_minimal_client:/home/quentin/ros2_ws/install/examples_rclpy_minimal_action_server:/home/quentin/ros2_ws/install/examples_rclpy_minimal_action_client:/home/quentin/ros2_ws/install/examples_rclpy_guard_conditions:/home/quentin/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/quentin/Bureau/roomba_virtuel/build/custom_interfaces

@@ -5,9 +5,9 @@ from custom_interfaces.msg import RoombaState
 from custom_interfaces.srv import SetPowerMode, ToggleCleaning
 
 class Dashboard(Node):
-#===================#
-#   Etat initial    #
-#===================#
+#================#
+#  Etat initial  #
+#================#
     def __init__(self):
         super().__init__('py_dashboard_cli')
 
@@ -15,39 +15,56 @@ class Dashboard(Node):
         self.subscription = self.create_subscription(RoombaState, 'roomba_telemetry', self.listener_callback, 10)
         self.subscription # prevent unused variable warning
 
-#===========================#
-#   Client set_power_mode   #
-#===========================#
+#=========================#
+#  Client set_power_mode  #
+#=========================#
         self.set_power_mode_cli = self.create_client(SetPowerMode, 'set_power_mode')
         while not self.set_power_mode_cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
         self.set_power_mode_req = SetPowerMode.Request()
 
-#============================#
-#   Client toggle_cleaning   #
-#============================#
+#==========================#
+#  Client toggle_cleaning  #
+#==========================#
         self.toggle_cleaning_cli = self.create_client(ToggleCleaning, 'toggle_cleaning')
         while not self.toggle_cleaning_cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
         self.toggle_cleaning_req = ToggleCleaning.Request()
 
     def listener_callback(self, msg):
-        self.get_logger().info(f'[Dashboard] Status: {msg.current_status} | Battery: {msg.battery_level} | Mode: {msg.power_mode} %/s')
+        self.get_logger().info(f'[Dashboard] Status: {msg.current_status} | Battery: {msg.battery_level}% | Mode: {msg.power_mode}')
 
-#============================#
-#   Request set_power_mode   #
-#============================#
+#==========================#
+#  Request set_power_mode  #
+#==========================#
     def send_request_cleaning(self, start_cleaning):
         self.toggle_cleaning_req.start_cleaning = start_cleaning
         return self.toggle_cleaning_cli.call_async(self.toggle_cleaning_req)
 
-#=============================#
-#   Request toggle_cleaning   #
-#=============================#    
+#===========================#
+#  Request toggle_cleaning  #
+#===========================#    
     def send_request_power(self, power_mode):
         self.set_power_mode_req.power_mode = power_mode
         return self.set_power_mode_cli.call_async(self.set_power_mode_req)
 
+#===========================#
+#  Callback set_power_mode  #
+#===========================#
+    def power_response_callback(self, future):
+        response = future.result()
+        self.get_logger().info(
+            f'Power mode response: {response.message}'
+        )
+
+#============================#
+#  Callback toggle_cleaning  #
+#============================#
+    def cleaning_response_callback(self, future):
+        response = future.result()
+        self.get_logger().info(
+            f'Cleaning response: {response.message}'
+        )
 
 def main():
     rclpy.init()
@@ -60,12 +77,10 @@ def main():
     start_cleaning = node.get_parameter('start_cleaning').get_parameter_value().bool_value
 
     future_power = node.send_request_power(mode)
-    rclpy.spin_until_future_complete(node, future_power)
-    node.get_logger().info(f'Power mode response: {future_power.result().message}')
-
+    future_power.add_done_callback(node.power_response_callback)
+    
     future_cleaning = node.send_request_cleaning(start_cleaning)
-    rclpy.spin_until_future_complete(node, future_cleaning)
-    node.get_logger().info(f'Cleaning response: {future_cleaning.result().message}')
+    future_cleaning.add_done_callback(node.cleaning_response_callback)
 
     rclpy.spin(node)
     rclpy.shutdown()
