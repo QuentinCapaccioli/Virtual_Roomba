@@ -1,8 +1,0 @@
-{
-  "package_name": "custom_interfaces",
-  "non_idl_tuples": [
-    "/home/quentin/Bureau/roomba_virtuel/src/custom_interfaces:msg/RoombaState.msg",
-    "/home/quentin/Bureau/roomba_virtuel/src/custom_interfaces:srv/SetPowerMode.srv",
-    "/home/quentin/Bureau/roomba_virtuel/src/custom_interfaces:srv/ToggleCleaning.srv"
-  ]
-}

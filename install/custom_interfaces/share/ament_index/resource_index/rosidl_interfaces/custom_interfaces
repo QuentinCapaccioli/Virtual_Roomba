@@ -1,6 +1,0 @@
-msg/RoombaState.idl
-msg/RoombaState.msg
-srv/SetPowerMode.idl
-srv/SetPowerMode.srv
-srv/ToggleCleaning.idl
-srv/ToggleCleaning.srv
