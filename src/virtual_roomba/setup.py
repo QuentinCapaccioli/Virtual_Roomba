@@ -24,8 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'talker = virtual_roomba.py_robot_core:main',
-            'listener = virtual_roomba.py_dashboard_cli:main',
+            'py_robot_core = virtual_roomba.py_robot_core:main',
+            'py_dashboard_cli = virtual_roomba.py_dashboard_cli:main',
         ],
     },
 )

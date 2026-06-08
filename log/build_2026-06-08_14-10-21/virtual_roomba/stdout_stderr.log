@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/virtual_roomba/virtual_roomba.egg-info/PKG-INFO
+writing dependency_links to ../../build/virtual_roomba/virtual_roomba.egg-info/dependency_links.txt
+writing entry points to ../../build/virtual_roomba/virtual_roomba.egg-info/entry_points.txt
+writing requirements to ../../build/virtual_roomba/virtual_roomba.egg-info/requires.txt
+writing top-level names to ../../build/virtual_roomba/virtual_roomba.egg-info/top_level.txt
+reading manifest file '../../build/virtual_roomba/virtual_roomba.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/virtual_roomba/virtual_roomba.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/python3.12/site-packages/virtual_roomba-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/virtual_roomba/virtual_roomba.egg-info to /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/python3.12/site-packages/virtual_roomba-0.0.0-py3.12.egg-info
+running install_scripts
+Installing py_dashboard_cli script to /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/virtual_roomba
+Installing py_robot_core script to /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/virtual_roomba
+writing list of installed files to '/home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/install.log'

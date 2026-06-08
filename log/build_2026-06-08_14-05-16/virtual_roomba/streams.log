@@ -1,0 +1,42 @@
+[0.747s] Invoking command in '/home/quentin/Bureau/roomba_virtuel/src/virtual_roomba': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/virtual_roomba build --build-base /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/build install --record /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/install.log --single-version-externally-managed install_data
+[0.966s] running egg_info
+[0.966s] creating ../../build/virtual_roomba/virtual_roomba.egg-info
+[0.983s] writing ../../build/virtual_roomba/virtual_roomba.egg-info/PKG-INFO
+[0.983s] writing dependency_links to ../../build/virtual_roomba/virtual_roomba.egg-info/dependency_links.txt
+[0.983s] writing entry points to ../../build/virtual_roomba/virtual_roomba.egg-info/entry_points.txt
+[0.983s] writing requirements to ../../build/virtual_roomba/virtual_roomba.egg-info/requires.txt
+[0.983s] writing top-level names to ../../build/virtual_roomba/virtual_roomba.egg-info/top_level.txt
+[0.983s] writing manifest file '../../build/virtual_roomba/virtual_roomba.egg-info/SOURCES.txt'
+[1.016s] reading manifest file '../../build/virtual_roomba/virtual_roomba.egg-info/SOURCES.txt'
+[1.016s] adding license file 'LICENSE'
+[1.016s] writing manifest file '../../build/virtual_roomba/virtual_roomba.egg-info/SOURCES.txt'
+[1.016s] running build
+[1.016s] running build_py
+[1.017s] creating /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/build
+[1.017s] creating /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/build/lib
+[1.017s] creating /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/build/lib/virtual_roomba
+[1.017s] copying virtual_roomba/py_robot_core.py -> /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/build/lib/virtual_roomba
+[1.017s] copying virtual_roomba/__init__.py -> /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/build/lib/virtual_roomba
+[1.017s] copying virtual_roomba/py_dashboard_cli.py -> /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/build/lib/virtual_roomba
+[1.017s] running install
+[1.022s] running install_lib
+[1.039s] creating /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/python3.12/site-packages/virtual_roomba
+[1.040s] copying /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/build/lib/virtual_roomba/py_robot_core.py -> /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/python3.12/site-packages/virtual_roomba
+[1.040s] copying /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/build/lib/virtual_roomba/__init__.py -> /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/python3.12/site-packages/virtual_roomba
+[1.040s] copying /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/build/lib/virtual_roomba/py_dashboard_cli.py -> /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/python3.12/site-packages/virtual_roomba
+[1.040s] byte-compiling /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/python3.12/site-packages/virtual_roomba/py_robot_core.py to py_robot_core.cpython-312.pyc
+[1.041s] byte-compiling /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/python3.12/site-packages/virtual_roomba/__init__.py to __init__.cpython-312.pyc
+[1.041s] byte-compiling /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/python3.12/site-packages/virtual_roomba/py_dashboard_cli.py to py_dashboard_cli.cpython-312.pyc
+[1.042s] running install_data
+[1.042s] creating /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/share/ament_index
+[1.042s] creating /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/share/ament_index/resource_index
+[1.042s] creating /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/share/ament_index/resource_index/packages
+[1.042s] copying resource/virtual_roomba -> /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/share/ament_index/resource_index/packages
+[1.042s] copying package.xml -> /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/share/virtual_roomba
+[1.042s] running install_egg_info
+[1.059s] Copying ../../build/virtual_roomba/virtual_roomba.egg-info to /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/python3.12/site-packages/virtual_roomba-0.0.0-py3.12.egg-info
+[1.060s] running install_scripts
+[1.169s] Installing listener script to /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/virtual_roomba
+[1.169s] Installing talker script to /home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/virtual_roomba
+[1.169s] writing list of installed files to '/home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/install.log'
+[1.201s] Invoked command in '/home/quentin/Bureau/roomba_virtuel/src/virtual_roomba' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/quentin/Bureau/roomba_virtuel/install/virtual_roomba/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/virtual_roomba build --build-base /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/build install --record /home/quentin/Bureau/roomba_virtuel/build/virtual_roomba/install.log --single-version-externally-managed install_data
