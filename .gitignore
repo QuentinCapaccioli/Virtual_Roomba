@@ -1,0 +1,30 @@
+# === ROS2 build artifacts ===
+build/
+install/
+log/
+logs/
+
+# === Colcon ===
+*.swp
+*.swo
+*.bak
+
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# === IDE ===
+.vscode/
+.idea/
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Environment ===
+.env
+
+# === ROS2 generated ===
+*.log
