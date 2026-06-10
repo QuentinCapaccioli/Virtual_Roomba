@@ -1,0 +1,112 @@
+# 🤖 Roomba Virtuel — Mini-Projet ROS2
+
+## Description
+Simulation logicielle d'un robot aspirateur virtuel sans interface graphique ni simulateur. Tout se passe dans le terminal. Ce projet met en pratique les notions de base de ROS2 : paramètres, topics et services.
+
+## Notions abordées
+| Notion | Utilisation |
+|--------|-------------|
+| Paramètres | Configuration du `drain_rate` au lancement |
+| Topics | Télémétrie du robot publiée à 1 Hz |
+| Services | Changer de mode de puissance, démarrer/arrêter le nettoyage |
+
+## Architecture
+```
+src/
+├── custom_interfaces/
+│   ├── msg/RoombaState.msg
+│   ├── srv/SetPowerMode.srv
+│   └── srv/ToggleCleaning.srv
+└── virtual_roomba/
+    └── virtual_roomba/
+        ├── py_robot_core.py
+        └── py_dashboard_cli.py
+```
+
+## Interfaces custom
+
+### `RoombaState.msg`
+```
+float32 battery_level    # Niveau de batterie (0 à 100)
+string current_status    # État du robot : "IDLE", "CLEANING" ou "DEAD"
+string power_mode        # Mode de puissance : "NORMAL", "ECO" ou "TURBO"
+```
+
+### `SetPowerMode.srv`
+```
+string power_mode        # Mode demandé : "NORMAL", "ECO" ou "TURBO"
+---
+bool success
+string message
+```
+
+### `ToggleCleaning.srv`
+```
+bool start_cleaning      # True = démarrer, False = arrêter
+---
+bool success
+string message
+```
+
+## Prérequis
+- Ubuntu Noble (24.04)
+- ROS2 Jazzy
+- Package `custom_interfaces` buildé
+
+## Installation
+```bash
+git clone <url_du_repo>
+cd roomba_virtuel
+colcon build
+source install/setup.bash
+```
+
+## Lancement
+
+**Terminal 1 — Cerveau du robot**
+```bash
+source install/setup.bash
+ros2 run virtual_roomba py_robot_core
+```
+
+**Terminal 2 — Dashboard**
+```bash
+source install/setup.bash
+ros2 run virtual_roomba py_dashboard_cli --ros-args -p mode:=NORMAL -p start_cleaning:=false
+```
+
+## Commandes utiles
+
+**Démarrer le nettoyage**
+```bash
+ros2 service call /toggle_cleaning custom_interfaces/srv/ToggleCleaning "{start_cleaning: true}"
+```
+
+**Arrêter le nettoyage**
+```bash
+ros2 service call /toggle_cleaning custom_interfaces/srv/ToggleCleaning "{start_cleaning: false}"
+```
+
+**Changer le mode de puissance**
+```bash
+ros2 service call /set_power_mode custom_interfaces/srv/SetPowerMode "{power_mode: 'ECO'}"
+ros2 service call /set_power_mode custom_interfaces/srv/SetPowerMode "{power_mode: 'TURBO'}"
+ros2 service call /set_power_mode custom_interfaces/srv/SetPowerMode "{power_mode: 'NORMAL'}"
+```
+
+## Modes de puissance
+| Mode | Effet sur drain_rate |
+|------|----------------------|
+| NORMAL | Taux de référence |
+| ECO | Taux × 0.5 |
+| TURBO | Taux × 2 |
+
+## Statuts du robot
+| Statut | Description |
+|--------|-------------|
+| IDLE | Robot en attente |
+| CLEANING | Robot en train de nettoyer |
+| DEAD | Batterie vide |
+
+## Auteur
+Quentin Capaccioli — 2026
