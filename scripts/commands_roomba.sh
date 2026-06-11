@@ -3,9 +3,9 @@
 # Chemin du repo (scripts/ → parent)
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-# ROS setup (important dans chaque terminal)
+# ROS setup
 source /opt/ros/jazzy/setup.bash
-source "$HOME/ros2_ws/install/setup.bash"
+source "$PROJECT_ROOT/install/setup.bash"
 
 echo "Roomba commands loaded from $PROJECT_ROOT/scripts"
 

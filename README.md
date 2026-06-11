@@ -58,24 +58,31 @@ string message
 git clone <url_du_repo>
 cd roomba_virtuel
 colcon build
-source install/setup.bash
 ```
 
 ## Lancement
 
-**Terminal 1 — Cerveau du robot**
+**Terminal 1 — Dashboard**
 ```bash
 source install/setup.bash
-ros2 run virtual_roomba py_robot_core
+ros2 launch virtual_roomba roomba_launch.py
 ```
 
-**Terminal 2 — Dashboard**
+**Terminal 2 — Cerveau du robot**
 ```bash
-source install/setup.bash
-ros2 run virtual_roomba py_dashboard_cli --ros-args -p mode:=NORMAL -p start_cleaning:=false
+source scripts/commands_roomba.sh
 ```
+Une fois ce fichier sourcé, les commandes suivantes deviennent disponibles directement dans le terminal :
+
+turbo       → mode puissance maximale
+eco         → mode économie d’énergie
+normal      → mode standard
+startclean  → démarrer le nettoyage
+stopclean   → arrêter le nettoyage
+
 
 ## Commandes utiles
+Les commandes suivantes peuvent être évité en utilisant les alias ci-dessus
 
 **Démarrer le nettoyage**
 ```bash
