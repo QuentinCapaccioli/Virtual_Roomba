@@ -74,12 +74,13 @@ source scripts/commands_roomba.sh
 ```
 Une fois ce fichier sourcé, les commandes suivantes deviennent disponibles directement dans le terminal :
 
-turbo       → mode puissance maximale
-eco         → mode économie d’énergie
-normal      → mode standard
-startclean  → démarrer le nettoyage
-stopclean   → arrêter le nettoyage
-
+| Commande    | Description                     |
+|-------------|---------------------------------|
+| `turbo`     | mode puissance maximale         |
+| `eco`       | mode économie d’énergie         |
+| `normal`    | mode standard                   |
+| `startclean`| démarrer le nettoyage          |
+| `stopclean` | arrêter le nettoyage           |
 
 ## Commandes utiles
 Les commandes suivantes peuvent être évité en utilisant les alias ci-dessus
