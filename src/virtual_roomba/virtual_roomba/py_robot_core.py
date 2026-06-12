@@ -1,5 +1,7 @@
 import rclpy
 from rclpy.node import Node
+import rclpy.parameter
+from rcl_interfaces.msg import SetParametersResult
 from custom_interfaces.msg import RoombaState
 from custom_interfaces.srv import SetPowerMode, ToggleCleaning
 
@@ -11,11 +13,17 @@ class RobotCore(Node):
     def __init__(self):
         super().__init__('py_robot_core')
 
-        # Parametre :
+        # Parametre Drain rate:
         self.declare_parameter('drain_rate', 1.0)
         self.base_drain_rate = self.get_parameter('drain_rate').get_parameter_value().double_value
         self.drain_rate = self.base_drain_rate
         self.get_logger().info(f'Taux de référence : {self.base_drain_rate} %/s')
+
+        # Parametre Cleaning speed
+        self.declare_parameter('cleaning_speed', 1.0)
+        self.base_cleaning_speed = self.get_parameter('cleaning_speed').get_parameter_value().double_value
+        self.cleaning_speed = self.base_cleaning_speed
+        self.get_logger().info(f'Taux de référence : {self.base_cleaning_speed} m²/s')
 
         # Etat interne initial :
         self.battery_level = 100.0
@@ -32,6 +40,43 @@ class RobotCore(Node):
         self.create_service(SetPowerMode, 'set_power_mode', self.set_power_mode_callback)
         # Service `ToggleCleaning` :
         self.create_service(ToggleCleaning, 'toggle_cleaning', self.toggle_cleaning_callback)
+
+        # Callback de validation
+        self.add_on_set_parameters_callback(self.event_callback)
+
+
+#====================#
+#   Event Callback   #
+#====================#
+    def event_callback(self, params):
+        for param in params:
+            if param.name == 'drain_rate':
+                if param.value <= 0.0:
+                    return SetParametersResult(
+                            successful=False,
+                            reason=f"Le paramètre reçu ({param.name}) doit être strictement positif: {param.value}"
+                        )
+                else:
+                    self.get_logger().info(f"Le paramètre ({param.name}) est bien passé à : {param.value}")
+                    self.base_drain_rate = float(param.value)
+
+                if self.power_mode == 'NORMAL':
+                    self.drain_rate = self.base_drain_rate
+                elif self.power_mode == 'TURBO':
+                    self.drain_rate = self.base_drain_rate*2.0
+                elif self.power_mode == 'ECO':
+                    self.drain_rate = self.base_drain_rate*0.5
+                self.get_logger().info(f'drain_rate mis à jour : base={self.base_drain_rate}, effectif={self.drain_rate}')
+            elif param.name == 'cleaning_speed':
+                if param.value <= 0.0:
+                    return SetParametersResult(
+                            successful=False,
+                            reason=f"Le paramètre reçu ({param.name}) doit être strictement positif: {param.value}"
+                        )
+                else:
+                    self.get_logger().info(f"Le paramètre ({param.name}) est bien passé à : {param.value}")
+                    self.base_cleaning_speed = float(param.value)
+        return SetParametersResult(successful=True)
 
 #===========#
 #   Timer   #

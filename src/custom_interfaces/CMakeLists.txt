@@ -29,6 +29,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/RoombaState.msg"
   "srv/SetPowerMode.srv"
   "srv/ToggleCleaning.srv"
+  "action/CleanArea.action"
+  DEPENDENCIES action_msgs
 )
 
 ament_package()
