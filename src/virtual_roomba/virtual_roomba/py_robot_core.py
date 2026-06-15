@@ -1,10 +1,14 @@
 import rclpy
 from rclpy.node import Node
-import rclpy.parameter
 from rcl_interfaces.msg import SetParametersResult
+from rclpy.action import ActionServer
+from rclpy.action.server import GoalResponse
+from rclpy.executors import MultiThreadedExecutor
+
 from custom_interfaces.msg import RoombaState
 from custom_interfaces.srv import SetPowerMode, ToggleCleaning
-
+from custom_interfaces.action import CleanArea
+import time
 
 class RobotCore(Node):
 #===================#
@@ -44,10 +48,93 @@ class RobotCore(Node):
         # Callback de validation
         self.add_on_set_parameters_callback(self.event_callback)
 
+        # Action server
+        self._action_server = ActionServer(
+            self,
+            CleanArea,
+            'clean_area',
+            execute_callback=self.execute_callback,
+            goal_callback=self.goal_callback)
 
-#====================#
-#   Event Callback   #
-#====================#
+#====================================#
+#   Conditions amont du clean_area   #
+#====================================#
+    def goal_callback(self, goal_request):
+        if self.current_status == "DEAD":
+            self.get_logger().info(f"L'objectif est refusé. Le robot est mort")
+            return GoalResponse.REJECT
+
+        elif goal_request.target_area <= 0:
+            self.get_logger().info("L'objectif est refusé. La zone cible est nulle")
+            return GoalResponse.REJECT
+
+        elif self.current_status == "CLEANING":
+            self.get_logger().info(f"L'objectif est refusé. Le robot est déjà en mission de nettoyage")
+            return GoalResponse.REJECT
+
+        else:
+            self.get_logger().info(f"L'objectif est accepté : {goal_request.target_area} m²")
+            return GoalResponse.ACCEPT
+
+
+#=============================#
+#   Execution du clean_area   #
+#=============================#
+    def execute_callback(self, goal_handle):
+        self.get_logger().info('Executing goal...')
+
+        # init
+        self.base_cleaning_speed = 1.0
+        self.base_drain_rate = 1.0
+        self.current_status = "CLEANING"
+
+        feedback_msg = CleanArea.Feedback()
+        result = CleanArea.Result()
+        cleaned_area = 0.0
+
+        # Execution en situation normale
+        while cleaned_area < goal_handle.request.target_area:
+
+            # annulation si demande
+            if goal_handle.is_cancel_requested:
+                goal_handle.canceled()
+                result.success = False
+                result.cleaned_area = cleaned_area
+                result.message = "annulé"
+                self.current_status = 'IDLE'
+                return result
+
+            # annulation en cas de batterie vide
+            if self.battery_level == 0 and self.current_status == "DEAD":
+                goal_handle.abort()
+                result.success = False
+                result.cleaned_area = cleaned_area
+                result.message = "batterie épuisée"
+                self.current_status = 'IDLE'
+                return result
+
+            # Avancemenent du nettoyage
+            cleaned_area += self.cleaning_speed
+            
+            # Feedback
+            feedback_msg.cleaned_area = cleaned_area
+            feedback_msg.progress = min((feedback_msg.cleaned_area / goal_handle.request.target_area) * 100.0, 100.0)
+            feedback_msg.battery_level = self.battery_level
+            goal_handle.publish_feedback(feedback_msg)
+
+            time.sleep(1)
+    
+        # Fin nominal
+        goal_handle.succeed()
+        result.success = True
+        result.cleaned_area = cleaned_area
+        result.message = 'Mission terminée avec succès'
+        self.current_status = 'IDLE'
+        return result
+
+#==============================#
+#   Validation des parametres  #
+#==============================#
     def event_callback(self, params):
         for param in params:
             if param.name == 'drain_rate':
@@ -157,7 +244,9 @@ class RobotCore(Node):
 def main():
     rclpy.init()
     node = RobotCore()
-    rclpy.spin(node)
+    executor = MultiThreadedExecutor()
+    executor.add_node(node)
+    executor.spin()
     rclpy.shutdown()
 
 
