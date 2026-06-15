@@ -1,3 +1,10 @@
+#=======================================================================================#
+# Objectif : Fichier service de roomba gerant le cerveau du projet 
+# Nom : Quentin Capaccioli
+# Date : 15/06/2026
+# Derniere modification: Ajout ActionServer
+#=======================================================================================#
+
 import rclpy
 from rclpy.node import Node
 from rcl_interfaces.msg import SetParametersResult
@@ -198,10 +205,13 @@ class RobotCore(Node):
         # Application du mode
         if new_mode == 'NORMAL':
             self.drain_rate = self.base_drain_rate
+            self.cleaning_speed = self.base_cleaning_speed
         elif new_mode == 'ECO':
             self.drain_rate = self.base_drain_rate * 0.5
+            self.cleaning_speed = self.base_cleaning_speed * 0.5
         elif new_mode == 'TURBO':
             self.drain_rate = self.base_drain_rate * 2.0
+            self.cleaning_speed = self.base_cleaning_speed * 2.0
         else:
             response.success = False
             response.message = f'Mode inconnu : {new_mode}'
