@@ -72,7 +72,7 @@ ros2 launch virtual_roomba roomba_launch.py
 ```bash
 source scripts/commands_roomba.sh
 ```
-Une fois ce fichier sourcé, les commandes suivantes deviennent disponibles directement dans le terminal :
+Une fois le fichier commands_roomba sourcé, les commandes suivantes deviennent disponibles directement dans le terminal :
 
 | Commande    | Description                     |
 |-------------|---------------------------------|
@@ -100,6 +100,19 @@ ros2 service call /toggle_cleaning custom_interfaces/srv/ToggleCleaning "{start_
 ros2 service call /set_power_mode custom_interfaces/srv/SetPowerMode "{power_mode: 'ECO'}"
 ros2 service call /set_power_mode custom_interfaces/srv/SetPowerMode "{power_mode: 'TURBO'}"
 ros2 service call /set_power_mode custom_interfaces/srv/SetPowerMode "{power_mode: 'NORMAL'}"
+```
+
+**Lancer l'action de nettoyage**
+```bash
+ros2 action send_goal --feedback /clean_area custom_interfaces/action/CleanArea "{target_area: 10.0}"
+```
+
+**Test du monitoring des paramètres**
+```bash
+ros2 param get /py_robot_core drain_rate
+ros2 param set /py_robot_core drain_rate 8.0     # accepté → décharge plus rapide en direct
+ros2 param set /py_robot_core drain_rate -1.0    # refusé par le callback de validation
+ros2 param set /py_robot_core cleaning_speed 0.0   # refusé (<= 0.0)
 ```
 
 ## Modes de puissance

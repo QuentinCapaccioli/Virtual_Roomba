@@ -1,0 +1,4 @@
+py_robot_core:
+  ros__parameters:
+    drain_rate: 2.0
+    cleaning_speed: 1.0

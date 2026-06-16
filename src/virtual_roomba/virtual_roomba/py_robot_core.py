@@ -91,8 +91,6 @@ class RobotCore(Node):
         self.get_logger().info('Executing goal...')
 
         # init
-        self.base_cleaning_speed = 1.0
-        self.base_drain_rate = 1.0
         self.current_status = "CLEANING"
 
         feedback_msg = CleanArea.Feedback()
