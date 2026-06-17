@@ -74,9 +74,8 @@ class Dashboard(Node):
         result = future.result().result
         self.get_logger().info(
             f"[Dashboard] Mission : "
-            f"{result.success:.1f} Mission réussi "
             f"({result.cleaned_area:.1f} m² nettoyés) "
-            f"— {result.message} %"
+            f"— {result.message}"
         )
 
     def feedback_callback(self, feedback_msg):
@@ -128,14 +127,15 @@ def main():
     node.declare_parameter('mode', 'NORMAL')
     node.declare_parameter('start_cleaning', False)
 
-    mode = node.get_parameter('mode').get_parameter_value().string_value
-    start_cleaning = node.get_parameter('start_cleaning').get_parameter_value().bool_value
+# Les lignes commentees ci-dessous sont inutiles durant l'action car elle se lance avec le mode CLEANING et le power mode NORMAL
+    #mode = node.get_parameter('mode').get_parameter_value().string_value
+    #start_cleaning = node.get_parameter('start_cleaning').get_parameter_value().bool_value
 
-    future_power = node.send_request_power(mode)
-    future_power.add_done_callback(node.power_response_callback)
+    #future_power = node.send_request_power(mode)
+    #future_power.add_done_callback(node.power_response_callback)
     
-    future_cleaning = node.send_request_cleaning(start_cleaning)
-    future_cleaning.add_done_callback(node.cleaning_response_callback)
+    #future_cleaning = node.send_request_cleaning(start_cleaning)
+    #future_cleaning.add_done_callback(node.cleaning_response_callback)
 
     node.send_goal(10.0)
 

@@ -99,6 +99,7 @@ class RobotCore(Node):
 
         # Execution en situation normale
         while cleaned_area < goal_handle.request.target_area:
+            time.sleep(1)
 
             # annulation si demande
             if goal_handle.is_cancel_requested:
@@ -110,7 +111,7 @@ class RobotCore(Node):
                 return result
 
             # annulation en cas de batterie vide
-            if self.battery_level == 0 and self.current_status == "DEAD":
+            if self.battery_level <= 0:
                 goal_handle.abort()
                 result.success = False
                 result.cleaned_area = cleaned_area
@@ -126,8 +127,6 @@ class RobotCore(Node):
             feedback_msg.progress = min((feedback_msg.cleaned_area / goal_handle.request.target_area) * 100.0, 100.0)
             feedback_msg.battery_level = self.battery_level
             goal_handle.publish_feedback(feedback_msg)
-
-            time.sleep(1)
     
         # Fin nominal
         goal_handle.succeed()
