@@ -16,11 +16,16 @@ src/
 ├── custom_interfaces/
 │   ├── msg/RoombaState.msg
 │   ├── srv/SetPowerMode.srv
-│   └── srv/ToggleCleaning.srv
+│   ├── srv/ToggleCleaning.srv
+│   └── action/CleanArea.action
 └── virtual_roomba/
-    └── virtual_roomba/
-        ├── py_robot_core.py
-        └── py_dashboard_cli.py
+    ├── virtual_roomba/
+    │   ├── py_robot_core.py
+    │   └── py_dashboard_cli.py
+    ├── config/
+    │   └── roomba_params.yaml
+    └── launch/
+        └── roomba.launch.py
 ```
 
 ## Interfaces custom
