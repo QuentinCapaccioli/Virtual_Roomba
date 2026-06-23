@@ -1,0 +1,30 @@
+#=======================================================================================#
+# Objectif : Fichier definissant les applications de chaque conteneur 
+# Nom : Quentin Capaccioli
+# Date : 23/06/2026
+# Derniere modification: Creation docker compose
+#=======================================================================================#
+
+services:
+
+  # ── Conteneur 1 : py_robot_core ─────────────────────────────────────────────────
+  robot_core:
+    build:
+      context: ./robot_core
+      dockerfile: Dockerfile
+    container_name: robot_core
+    network_mode: host
+    volumes:
+      - ./config:/config
+
+  # ── Conteneur 2 : py_dashboard_cli ───────────────────────────────────
+  dashboard_cli: 
+    build:
+      context: ./dashboard_cli
+      dockerfile: Dockerfile
+    container_name: dashboard_cli
+    network_mode: host
+    depends_on:
+      - robot_core
+    volumes:
+      - ./config:/config

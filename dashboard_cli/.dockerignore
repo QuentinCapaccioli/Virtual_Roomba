@@ -1,0 +1,11 @@
+#=======================================================================================#
+# Objectif : exclut les fichiers inutiles du contexte de build   
+# Nom : Quentin Capaccioli
+# Date : 23/06/2026
+# Derniere modification: Creation fichier
+#=======================================================================================#
+
+node_modules
+npm-debug.log
+logs/
+.env

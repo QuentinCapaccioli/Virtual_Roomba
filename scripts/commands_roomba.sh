@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#=======================================================================================#
+# Objectif : Script shell definissant les commandes utiles  
+# Nom : Quentin Capaccioli
+# Date : 23/06/2026
+# Derniere modification: Ajout commentaire
+#=======================================================================================#
+
 # Chemin du repo (scripts/ → parent)
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
