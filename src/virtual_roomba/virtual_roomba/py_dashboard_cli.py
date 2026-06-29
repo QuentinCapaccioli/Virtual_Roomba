@@ -73,7 +73,7 @@ class Dashboard(Node):
     def get_result_callback(self, future):
         result = future.result().result
         self.get_logger().info(
-            f"[Dashboard] Mission : "
+            f"[Action] Mission : "
             f"({result.cleaned_area:.1f} m² nettoyés) "
             f"— {result.message}"
         )
@@ -82,7 +82,7 @@ class Dashboard(Node):
         feedback = feedback_msg.feedback
 
         self.get_logger().info(
-            f"[Dashboard] Mission : "
+            f"[Action] Mission : "
             f"{feedback.cleaned_area:.1f} m² nettoyés "
             f"({feedback.progress:.1f} %) — "
             f"Batterie {feedback.battery_level:.1f} %"

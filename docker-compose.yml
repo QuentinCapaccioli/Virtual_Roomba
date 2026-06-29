@@ -5,15 +5,43 @@
 # Derniere modification: Creation docker compose
 #=======================================================================================#
 
-services:
+# services:
 
-  # ── Conteneur 1 : py_robot_core + py_dashboard_cli ────────────────────
+#   # ── Conteneur 1 : py_robot_core + py_dashboard_cli ────────────────────
+#   roomba:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     image: virtual_roomba
+#     container_name: roomba
+#     network_mode: host
+#     environment:
+# #      - DISPLAY=$DISPLAY
+# #      - WAYLAND_DISPLAY=$WAYLAND_DISPLAY
+# #      - XDG_RUNTIME_DIR=/tmp
+#     volumes:
+#       - ./config:/config
+#       - ./launch:/VirtualRoomba/install/virtual_roomba/share/virtual_roomba
+#       # - /tmp/.X11-unix:/tmp/.X11-unix
+#       # - $XDG_RUNTIME_DIR/$WAYLAND_DISPLAY:/tmp/$WAYLAND_DISPLAY
+
+#=======================================================================================#
+# QCA_2026
+#=======================================================================================#
+
+services:
   roomba:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: roomba.Dockerfile
+    image: virtual_roomba:jazzy
     container_name: roomba
+    # Indispensable pour le dashboard_cli interactif :
+    # stdin_open: true   # équivaut à -i
+    # tty: true          # équivaut à -t
+    # ROS 2 a besoin du multicast pour la découverte des nœuds :
     network_mode: host
+    environment:
+      - ROS_DOMAIN_ID=0
     volumes:
-      - ./config:/config
-      - ./launch:/VirtualRoomba/install/virtual_roomba/share/virtual_roomba
+      - ./src/virtual_roomba/virtual_roomba/py_dashboard_cli.py:/src/virtual_roomba/virtual_roomba/py_dashboard_cli.py

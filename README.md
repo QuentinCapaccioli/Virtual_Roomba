@@ -1,5 +1,8 @@
 # 🤖 Roomba Virtuel — Mini-Projet ROS2
 
+## Patch FUTUR
+Mettre les fichiers python py_robot_core.py et py_dashboard_cli.py en volume fonctionnel avec simple docker compose up
+
 ## Description
 Simulation logicielle d'un robot aspirateur virtuel sans interface graphique ni simulateur. Tout se passe dans le terminal. Ce projet met en pratique les notions de base de ROS2 : paramètres, topics et services.
 
@@ -16,20 +19,20 @@ VirtualRoomba/
 ├── docker-compose.yml
 ├── Dockerfile
 ├── .dockerignore
-├── src/
-│   ├── custom_interfaces/
-│   │   ├── msg/RoombaState.msg
-│   │   ├── srv/SetPowerMode.srv
-│   │   ├── srv/ToggleCleaning.srv
-│   │   └── action/CleanArea.action
-│   └── virtual_roomba/
-│       └── virtual_roomba/
-│           ├── py_robot_core.py
-│           └── py_dashboard_cli.py
-├── config/
-│   └── roomba_params.yaml
-└── launch/
-    └── roomba.launch.py
+└── src/
+    ├── custom_interfaces/
+    │   ├── msg/RoombaState.msg
+    │   ├── srv/SetPowerMode.srv
+    │   ├── srv/ToggleCleaning.srv
+    │   └── action/CleanArea.action
+    └── virtual_roomba/
+        ├── virtual_roomba/
+        │   ├── py_robot_core.py
+        │   └── py_dashboard_cli.py
+        ├── config/
+        │   └── roomba_params.yaml
+        └── launch/
+            └── roomba.launch.py
 ```
 
 ## Interfaces custom
