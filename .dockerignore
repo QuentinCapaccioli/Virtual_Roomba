@@ -9,3 +9,7 @@ node_modules
 npm-debug.log
 logs/
 .env
+.git
+*.log
+build/
+install/

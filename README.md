@@ -12,20 +12,24 @@ Simulation logicielle d'un robot aspirateur virtuel sans interface graphique ni 
 
 ## Architecture
 ```
-src/
-├── custom_interfaces/
-│   ├── msg/RoombaState.msg
-│   ├── srv/SetPowerMode.srv
-│   ├── srv/ToggleCleaning.srv
-│   └── action/CleanArea.action
-└── virtual_roomba/
-    ├── virtual_roomba/
-    │   ├── py_robot_core.py
-    │   └── py_dashboard_cli.py
-    ├── config/
-    │   └── roomba_params.yaml
-    └── launch/
-        └── roomba.launch.py
+VirtualRoomba/
+├── docker-compose.yml
+├── Dockerfile
+├── .dockerignore
+├── src/
+│   ├── custom_interfaces/
+│   │   ├── msg/RoombaState.msg
+│   │   ├── srv/SetPowerMode.srv
+│   │   ├── srv/ToggleCleaning.srv
+│   │   └── action/CleanArea.action
+│   └── virtual_roomba/
+│       └── virtual_roomba/
+│           ├── py_robot_core.py
+│           └── py_dashboard_cli.py
+├── config/
+│   └── roomba_params.yaml
+└── launch/
+    └── roomba.launch.py
 ```
 
 ## Interfaces custom

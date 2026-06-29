@@ -7,24 +7,13 @@
 
 services:
 
-  # ── Conteneur 1 : py_robot_core ─────────────────────────────────────────────────
-  robot_core:
+  # ── Conteneur 1 : py_robot_core + py_dashboard_cli ────────────────────
+  roomba:
     build:
-      context: ./robot_core
+      context: .
       dockerfile: Dockerfile
-    container_name: robot_core
+    container_name: roomba
     network_mode: host
     volumes:
       - ./config:/config
-
-  # ── Conteneur 2 : py_dashboard_cli ───────────────────────────────────
-  dashboard_cli: 
-    build:
-      context: ./dashboard_cli
-      dockerfile: Dockerfile
-    container_name: dashboard_cli
-    network_mode: host
-    depends_on:
-      - robot_core
-    volumes:
-      - ./config:/config
+      - ./launch:/VirtualRoomba/install/virtual_roomba/share/virtual_roomba

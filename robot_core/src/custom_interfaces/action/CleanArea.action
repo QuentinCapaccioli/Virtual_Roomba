@@ -1,9 +1,0 @@
-float32 target_area        # surface à nettoyer, en m²
----
-bool success               # True si la surface a été entièrement nettoyée
-float32 cleaned_area       # surface réellement nettoyée (m²)
-string message             # détail lisible (terminé, annulé, batterie morte…)
----
-float32 cleaned_area       # m² déjà nettoyés
-float32 progress           # avancement en % (0 à 100)
-float32 battery_level      # batterie courante, pour suivre la mission

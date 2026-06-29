@@ -1,10 +1,10 @@
 #=======================================================================================#
-# Objectif : cree le conteneur Docker pour le core du roomba  
+# Objectif : cree le conteneur Docker pour le dashboard du roomba  
 # Nom : Quentin Capaccioli
 # Date : 23/06/2026
-# Derniere modification: creation du dockerfile
+# Derniere modification: creation du Dockerfile
 #=======================================================================================#
-FROM ros:humble-ros-base
+FROM ros:jazzy-ros-base
 
 #==============================#
 #   Installation dépendances   #
@@ -17,15 +17,15 @@ RUN apt-get update && apt-get install -y \
 #====================#
 #   Workspace ROS2   #
 #====================#
-WORKDIR /Virtual_Roomba
+WORKDIR /VirtualRoomba
 
 # Copier le code
-COPY . /Virtual_Roomba
+COPY . /VirtualRoomba/
 
 #==========================#
 #   Build ROS2 workspace   #
 #==========================#
-RUN . /opt/ros/humble/setup.sh && \
+RUN . /opt/ros/jazzy/setup.sh && \
     colcon build
 
 #========================#
@@ -33,4 +33,4 @@ RUN . /opt/ros/humble/setup.sh && \
 #========================#
 SHELL ["/bin/bash", "-c"]
 
-CMD ["bash", "-c", "source /opt/ros/humble/setup.bash && source /ros2_ws/install/setup.bash && ros2 run virtual_roomba py_robot_core"]
+CMD ["bash", "-c", "ros2 launch virtual_roomba roomba.launch.py"]
