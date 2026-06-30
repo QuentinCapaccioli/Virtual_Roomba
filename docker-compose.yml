@@ -44,4 +44,4 @@ services:
     environment:
       - ROS_DOMAIN_ID=0
     volumes:
-      - ./src/virtual_roomba/virtual_roomba/py_dashboard_cli.py:/src/virtual_roomba/virtual_roomba/py_dashboard_cli.py
+      - ./src:/VirtualRoomba/src

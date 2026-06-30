@@ -77,7 +77,7 @@ colcon build
 **Terminal 1 — Dashboard**
 ```bash
 source install/setup.bash
-ros2 launch virtual_roomba roomba_launch.py
+ros2 launch virtual_roomba roomba.launch.py
 ```
 
 **Terminal 2 — Cerveau du robot**
